@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island Kanto - Regras do Servidor</title>
+    <style>
+        :root {
+            --primary: #d10000;
+            --secondary: #cc0000;
+            --dark: #121212;
+            --darker: #0a0a0a;
+            --light: #f0f0f0;
+            --accent: #ffcc00;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542779283-429940ce8336?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-container img {
+            height: 120px;
+            margin-right: 20px;
+        }
+        
+        h1 {
+            color: var(--accent);
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            color: var(--light);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .rules-nav {
+            background-color: var(--darker);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .rules-nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+        
+        .rules-nav li {
+            margin: 0.5rem;
+        }
+        
+        .rules-nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .rules-nav a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .rule-section {
+            background-color: var(--darker);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .rule-section h2 {
+            color: var(--accent);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .rule-section h2::before {
+            content: "⚡";
+            margin-right: 10px;
+        }
+        
+        .rule-section h3 {
+            color: var(--primary);
+            margin-top: 1.5rem;
+        }
+        
+        .rule-item {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid rgba(255,204,0,0.3);
+        }
+        
+        .rule-item strong {
+            color: var(--accent);
+        }
+        
+        .credits {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 2rem;
+            padding: 1rem;
+            border-top: 1px solid #333;
+        }
+        
+        .pokemon-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .pokemon-item {
+            background-color: rgba(255,255,255,0.05);
+            padding: 0.5rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .rules-nav ul {
+                flex-direction: column;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+            }
+            
+            .logo-container img {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png" alt="Pokémon Logo">
+            <div>
+                <h1>ISLAND KANTO</h1>
+                <p class="subtitle">Regras do Servidor FiveM - Roleplay Pokémon</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <nav class="rules-nav">
+            <ul>
+                <li><a href="#geral">Regras Gerais</a></li>
+                <li><a href="#discord">Regras Discord</a></li>
+                <li><a href="#personagem">Regras de Personagem</a></li>
+                <li><a href="#pokemon">Regras Pokémon</a></li>
+                <li><a href="#ginasios">Regras de Ginásios</a></li>
+            </ul>
+        </nav>
+        
+        <!-- REGRAS GERAIS -->
+        <section id="geral" class="rule-section">
+            <h2>🪩 REGRAS GERAIS ROLEPLAY</h2>
+            <p><em>Portal criado e desenvolvido por: [COO] Harley Foxy | Créditos: [COO] Prin</em></p>
+            
+            <div class="rule-item">
+                <strong>1.</strong> Todos os jogadores têm o dever de ler e se atentar às regras do servidor. Para desenvolver um bom Roleplay é sempre necessário o uso do bom senso. Caso haja quebra de regras, o jogador se torna sujeito às punições e advertências;
+            </div>
+            
+            <div class="rule-item">
+                <strong>2.</strong> Idade (real) mínima para entrar no servidor Island Kanto é de 18 anos;
+            </div>
+            
+            <div class="rule-item">
+                <strong>3.</strong> Este é um servidor de interpretação de personagens e criação de histórias, então sempre interprete seu personagem acima de qualquer situação e nunca saia do roleplay;
+            </div>
+            
+            <div class="rule-item">
+                <strong>4.</strong> Quando desmaiado você não poderá lembrar do contexto que levou ao seu desmaio e nada referente a história do seu desmaio. Mesmo sem lembrar o contexto, caso seja realizado RP com o paramédico, deverá dar ao paramédico a interpretação de dores para que o mesmo desenvolva um cenário em volta do seu desmaio e realize seu atendimento;
+            </div>
+            
+            <div class="rule-item">
+                <strong>5.</strong> Caso você esteja realizando um roleplay criminal, em hipótese alguma você deverá dar sugestões ou questionar procedimentos policiais dentro do roleplay, caso ache que passou por algum desconforto ou quebra de regra, o canal adequado de denúncia é o sistema de tickets, lembre-se, você é um criminoso, caso queira saber procedimentos policiais, faça o recrutamento da polícia;
+            </div>
+            
+            <div class="rule-item">
+                <strong>6.</strong> Roleplay é uma interpretação volátil, ou seja, nem sempre o roleplay sairá da forma a qual você planejou, por isso tenha em mente sempre se adaptar ao cenário o qual você está inserido, seu roleplay não está acima de nenhum outro jogador;
+            </div>
+            
+            <div class="rule-item">
+                <strong>7.</strong> Roleplays que envolvam a saúde do seu personagem em condições específicas, como por exemplo: roleplay de um personagem PCD (seja a condição motora ou intelectual) deverá passar por alinhamento juntamente a staff;
+            </div>
+            
+            <div class="rule-item">
+                <strong>8.</strong> Amor à vida é obrigatório, sendo proibido o RDM, VDM, flaming, powergaming, metagaming, ghosting, cheating, combat logging e/ou programas auxiliares de mira, se beneficiar e/ou abusar de exploits e bugs;
+            </div>
+            
+            <div class="rule-item">
+                <strong>9.</strong> Abuso de bugs e abuso de mecânicas é proibido;
+            </div>
+            
+            <div class="rule-item">
+                <strong>10.</strong> Qualquer forma de comércio referente a Island Kanto (compra de itens, carros ou contas e entre outros), qual for conduzido fora do game, seja por dinheiro do servidor ou dinheiro real, é extremamente proibido, acarretando em banimento permanente de nossa comunidade;
+            </div>
+            
+            <div class="rule-item">
+                <strong>11.</strong> É proibido a utilização do chat da polícia e do hospital para realizar brincadeiras, reclamações, provocações e bate-papo.
+            </div>
+            
+            <h3>FLAMING</h3>
+            <p>Flaming, é o ato de inflamar alguma situação ou pessoa de forma negativa, incitando o ódio, acusações, ofensas, ameaças e etc contra algo ou alguém. Os jogadores devem manter o respeito mútuo, sendo proibido qualquer tipo de flame in-game ou em qualquer outro método de comunicação social (stream, redes sociais e etc).</p>
+            
+            <h3>POWERGAMING (PG)</h3>
+            <p>Envolve realizar ações impossíveis ou irreais, bem como se recusar a reconhecer as ações ou intenções dos outros jogadores. O Powergaming é proibido, exceto aos relacionados à utilização de veículos em rampas e construções.</p>
+            
+            <div class="rule-item">
+                <strong>I.</strong> Proibido o powergaming utilizando veículos esportivos para subir escadas;
+            </div>
+            
+            <div class="rule-item">
+                <strong>II.</strong> Proibido o uso de bugs de colisões para subir ou atravessar barreiras, barricadas, muros ou objetos que excedem a altura do parachoque do veículo.
+            </div>
+            
+            <h3>METAGAMING</h3>
+            <p>Ocorre quando os jogadores utilizam informações de fora do jogo para influenciar suas ações dentro dele, como usar dados de Discord ou Twitch para obter vantagens injustas. Os personagens devem agir apenas com base no que aprendem no jogo. Discussões de assuntos da vida real ou ações baseadas em transmissões ao vivo são proibidas.</p>
+            
+            <h3>RDM</h3>
+            <p>Quando um jogador ataca ou mata outro jogador sem um motivo válido ou sem um desenvolvimento de roleplay adequado. Isso significa que atos de agressão violenta devem sempre ser justificados dentro da narrativa do jogo e devem ser precedidos por uma interação significativa.</p>
+            
+            <h3>VDM</h3>
+            <p>Quando um jogador usa um veículo para ferir ou matar outros jogadores sem um motivo válido ou justificação no contexto do jogo.</p>
+            
+            <h3>COMBAT LOGGING (CL)</h3>
+            <p>Quando um jogador desconecta deliberadamente do jogo durante ou após um conflito ou ação para obter vantagem ou evitar consequências no roleplay. Este comportamento é considerado antiético, pois interrompe a continuidade das interações entre os personagens e compromete a imersão dos outros jogadores. Isso também inclui dar "/gg" ao estar caído quando há um roleplay acontecendo para que um socorro o ajude.</p>
+            
+            <p>Se o jogo travar ou o servidor cair, é obrigatório informar imediatamente na aba "CRASH" no Discord, incluindo uma captura de tela do relógio do Windows para comprovar o horário do incidente.</p>
+            
+            <h3>AMOR A VIDA</h3>
+            <p>Refere-se ao princípio de que os jogadores devem valorizar a vida de seus personagens de forma realista, evitando comportamentos que colocariam suas vidas em risco desnecessariamente. Isso significa que os personagens devem agir de maneira prudente em situações de perigo, considerando a preservação de sua própria vida como prioridade, assim como faria uma pessoa na vida real. Desafiar inimigos sem motivo, correr para o perigo sem precauções ou tomar decisões suicidas sem um contexto válido de roleplay são exemplos de violação desse princípio.</p>
+            
+            <h3>REVENGE KILL (RK)</h3>
+            <p>Quando um jogador, após ser morto no jogo, retorna e mata o personagem que o matou sem um motivo válido dentro e relembrando do ocorrido. O objetivo do roleplay é criar uma história coerente, e ações de revenge kill comprometem a integridade dessa narrativa.</p>
+            
+            <h3>TRASH RP</h3>
+            <p>Roleplay de baixa qualidade onde as ações dos jogadores são irracionais e imaturas, muitas vezes interrompendo a experiência dos outros jogadores de forma negativa. Também está incluso o RP envolvendo assédio, racismo, aborto, mutilação, suicídio, homofobia, xenofobia, transfobia, machismo e diversos outros preconceitos.</p>
+            
+            <h3>SAFEZONES</h3>
+            <p>É proibido a prática de quaisquer atos ilegais em locais de farms e safezones. O descumprimento desta regra poderá acarretar em suspensão de Allowlist. Observação: Algumas safezones possuem uma área para batalhas, nelas está liberado o confronto.</p>
+            
+            <div class="rule-item">
+                ● Concessionária<br>
+                ● Hospital<br>
+                ● Departamento de Polícia<br>
+                ● Mecânica<br>
+                ● Centros Pokemon<br>
+                ● Restaurantes<br>
+                ● Missões (Rattata, Grimer, Tauro, Fósseis)
+            </div>
+            
+            <h3>REGRAS ANTI-ROLEPLAY</h3>
+            <div class="rule-item">
+                <strong>1.</strong> É proibido colocar músicas no VoIP do jogo em qualquer situação (salvo em festas e eventos ou lugares destinados a esse tipo de roleplay como boates e etc.);
+            </div>
+            
+            <div class="rule-item">
+                <strong>2.</strong> É proibido qualquer tipo de corrupção em empregos legais setados (Hospital, Polícia, Ginásios, Restaurantes e Mecânica).
+            </div>
+            
+            <h3>REGRAS PARA CHAMADOS IN GAME</h3>
+            <p>Antes de realizar qualquer tipo de chamado dentro do jogo, leia as regras e os canais do Discord, na maioria das vezes a sua dúvida é resolvida através de uma leitura rápida das informações disponíveis.</p>
+            
+            <div class="rule-item">
+                <strong>1.</strong> Todos os chamados deverão conter uma descrição da situação/problema;
+            </div>
+            
+            <div class="rule-item">
+                <strong>2.</strong> Todo e qualquer chamado do tipo: "Me ajude/Socorro/Vem cá lindo/Preciso conversar com você/ADM quando der vem aqui", não serão atendidos, por mais que seja feito diversas vezes.
+            </div>
+        </section>
+        
+        <!-- REGRAS DISCORD -->
+        <section id="discord" class="rule-section">
+            <h2>2. REGRAS DISCORD</h2>
+            <p><em>Portal criado e desenvolvido por: [COO] Harley Foxy | Créditos: [COO] Prin</em></p>
+            
+            <div class="rule-item">
+                <strong>1.</strong> Ao abrir um ticket no discord da cidade, seja objetivo e claro na sua mensagem para que possamos direcionar melhor a sua dúvida e te atender com objetividade;
+            </div>
+            
+            <div class="rule-item">
+                <strong>2.</strong> Proibido realizar qualquer tipo de divulgação em salas do Discord, com exceção daquelas que são destinadas à divulgação de lives;
+            </div>
+            
+            <div class="rule-item">
+                <strong>3.</strong> Proibido utilizar o canal de dúvidas, sugestões entre outros, para fins o qual não foi destinado;
+            </div>
+            
+            <div class="rule-item">
+                <strong>4.</strong> Dentro do Discord não é permitido e nem tolerado nenhuma forma de comportamento tóxico, nenhum problema fora do RP deve ser levado para dentro do jogo e vice-versa;
+            </div>
+            
+            <div class="rule-item">
+                <strong>5.</strong> A utilização do Discord como rádio externa é proibida.
+            </div>
+            
+            <h3>DENÚNCIAS | VIA TICKET | DISCORD</h3>
+            <p>Qualquer denúncia de quebra de regra contra um jogador deve ser feita no máximo em até 24 horas após o ocorrido via TICKET | DISCORD. Denúncias realizadas após esse prazo serão desconsideradas. Exceto para casos de TRASH RP, que podem ser denunciados a qualquer momento, sem limite de tempo. Todas as denúncias só serão aceitas se preenchidas de forma correta, sendo necessário vídeos e descrições que comprovem o fato.</p>
+        </section>
+        
+        <!-- REGRAS DE PERSONAGEM -->
+        <section id="personagem" class="rule-section">
+            <h2>3. REGRAS DE PERSONAGEM</h2>
+            <p><em>Portal criado e desenvolvido por: [COO] Harley Foxy</em></p>
+            
+            <div class="rule-item">
+                <strong>1.</strong> É proibido qualquer nome ou sobrenome que tenham conotação sexual, preconceito ou de origem da franquia Pokemon;
+            </div>
+            
+            <div class="rule-item">
+                <strong>2.</strong> Idade (real) mínima para entrar no servidor Island Kanto é de 18 anos, porém o seu personagem poderá viver um adolescente com idade mínima de 16 anos;
+            </div>
+            
+            <div class="rule-item">
+                <strong>3.</strong> Os personagens extras não podem ter vínculo nenhum com os seus outros personagens. (não podem ser da mesma família, conhecidos e etc.);
+            </div>
+            
+            <div class="rule-item">
+                <strong>4.</strong> Não poderá ter um personagem em mais de uma equipe do ilegal;
+            </div>
+            
+            <div class="rule-item">
+                <strong>5.</strong> Não poderá compartilhar nenhuma informação entre personagens;
+            </div>
+            
+            <div class="rule-item">
+                <strong>6.</strong> É permitido ter personagens em empregos ilegais e outros com empregos legais (exceto polícia).
+            </div>
+        </section>
+        
+        <!-- REGRAS POKÉMON -->
+        <section id="pokemon" class="rule-section">
+            <h2>5. REGRAS POKÉMON</h2>
+            <p><em>Portal criado e desenvolvido por: [COO] Harley Foxy</em></p>
+            
+            <h3>REGRAS POKÉMON</h3>
+            
+            <h4>I. POKÉMON TEM SENTIMENTOS</h4>
+            <p>Os Pokémons são animais que possuem sentimentos e você é responsável por cuidar deles, tanto dos seus Pokémons quanto os Pokémons selvagens que encontrar. Eles podem estar cansados, irritados, felizes... é preciso entender a natureza de cada um, como eles podem estar se sentindo e utilizar isso como RP.</p>
+            <p>Um caso particular e muito importante disso está relacionado à disposição de um Pokémon para batalhar. Por exemplo, imagine que você tem um Pokémon nível 10 com uma natureza passiva, que foi derrotado três vezes seguidas, obviamente, mesmo que você o tenha curado no Centro Pokémon, ele se sentirá frustrado e não irá querer mais lutar. Cada situação terá suas variáveis e deverá fazer sentido dentro do RP.</p>
+            <p>O que é claro é que você não pode fazer seu Bulbassauro nível 5 lutar 10 vezes seguidas se ele perder todas as 10 batalhas! Criem um RP coerente com essas situações!</p>
+            
+            <h4>II. PROIBIDO FARMAR XP PARA AUMENTAR AS ESTATÍSTICAS DE UM POKÉMON</h4>
+            <p>Farmar XP através de batalhas com players ou pokémons selvagens só para aumentar as estatísticas só torna sua experiência cada vez mais fraca em RP. Isso envolve manter diversas batalhas consecutivas sem discernimento. Esta regra faz sentido tanto do ponto de vista prático quanto para evitar uma exploração sem sentido da experiência de um verdadeiro Treinador Pokémon.</p>
+            
+            <h4>III. OS POKÉMON SÃO COMO ARMAS</h4>
+            <p>O nível do seu Pokémon representa o quão forte você é e quanto poder você tem em relação aos outros, ou seja, se eu tiver um Pokémon de nível 60 e você tiver um de nível 15, eu sou muito mais poderoso, já que eu o supero significativamente e posso causar danos graves a você. Em termos de armamento em um servidor típico, temos alguns comparativos:</p>
+            
+            <div class="rule-item">
+                ● Um Pokémon de nível 15 seria como uma FACA;<br>
+                ● Um Pokémon de nível 45 seria como uma PISTOLA;<br>
+                ● Um Pokémon de nível 70 seria como uma AK-47
+            </div>
+            
+            <p>Lembrando que é algo aproximado, sem ser exato. É apenas para estabelecer uma relação coerente e reafirmar que os Pokémon são vistos como armas.</p>
+            
+            <h4>IV. ROUBO DE POKÉMON</h4>
+            <p>Não é permitido roubar Pokémon, exceto se você estiver realizando um RP aprovado pela administração, dando à vítima a oportunidade de entregar qualquer Pokémon para você (da escolha dela) após uma batalha justa. Logo após a vítima terá 1 semana de imunidade.</p>
+            <p>No caso de um Pokémon lendário, você pode roubar se vencer em um duelo, desde que não esteja em uma zona segura. Evitar o roleplay de ter um Pokémon roubado nesses casos resultará em advertência.</p>
+            
+            <h4>V. INFORMAÇÕES DA TAG</h4>
+            <p>Ao visualizar a TAG acima do Pokémon, você não pode saber o nick do mesmo e nem mesmo informações de gênero e nível. Além disso os níveis do pokemon devem ser interpretados como a idade dele, sendo meses ou anos.</p>
+            
+            <h4>VI. INFORMAÇÃO DO SEUS POKÉMON</h4>
+            <p>Você pode saber exatamente todas as suas estatísticas e é responsável por garantir que essas tenham consequências no roleplay, quando aplicável. Por exemplo, se um de seus ataques não tiver mais PP, significa que o Pokémon está cansado desse movimento.</p>
+            
+            <h4>VII. INFORMAÇÃO SOBRE OS SPAWNS DOS POKÉMON</h4>
+            <p>Não é permitido trocar informações sobre o spawn de um Pokémon em troca de algo. Para fornecer esse tipo de informação, deve ser feito de forma natural no roleplay, sem ser algo forçado.</p>
+            
+            <h4>VIII. POKÉMON NA NATUREZA</h4>
+            <p>Estar cercado por Pokémons selvagens de nível mais alto que os seus próprios, ou estar sem Pokémon, é muito perigoso e requer uma justificação suficientemente plausível para ocorrer.</p>
+            
+            <h4>IX. COMBATES FP</h4>
+            <div class="rule-item">
+                ● Um combate fairplay é aquele onde os níveis dos Pokémon são limitados a um máximo. Por exemplo, um combate com limite de nível 40 faria com que Pokémon de níveis 47 e 58 fossem ajustados para nível 40, enquanto Pokémon de níveis 30 e 12 permaneceriam em seus níveis originais. Esses combates podem ser iniciados voluntariamente com o comando /pvpfp.<br><br>
+                
+                ● Os combates que envolvem um policial em serviço e um criminoso serão automaticamente fairplay ao nível mais alto do meliante, com um mínimo de nível 25. A esse valor serão adicionados 5 níveis, ou seja, se o Pokémon com maior nível do criminoso for 25, a batalha será colocada em 30.
+            </div>
+            
+            <h4>X. POKÉMON LENDÁRIO</h4>
+            <p>POKÉMON LENDÁRIOS são únicos e aparecerão conforme o desenvolvimento da história da cidade e por meio de eventos programados.</p>
+            <p>Quando o Lendário for capturado pela primeira vez em um evento, o dono será convocado pela POKÉMON COMPANY e receberá ALGUMAS MISSÕES para de fato provar que é um treinador DIGNO desse POKÉMON LENDÁRIO. Os treinadores que desejarem desafiar o atual dono do lendário, deverão fazer uma INSCRIÇÃO para o TORNEIO LENDÁRIO com a POKÉMON COMPANY. Esse torneio poderá ocorrer de forma QUINZENAL ou MENSAL na ARENA LENDÁRIA e será anunciado. O treinador que fizer sua inscrição também será submetido a missões antes do grande dia do TORNEIO LENDÁRIO, para que também se prove DIGNO de tal DESAFIO e talvez O FUTURO NOVO DONO DO LENDÁRIO.</p>
+            <p>O tempo limite para estar off do servidor sendo dono de um lendário é no máximo 4 dias na semana (seguidos ou não). Abra ticket para comunicar sua ausência e o motivo, caso contrário será passivo de punição administrativa e o lendário será retirado de você.</p>
+            
+            <h4>XI. NICK DOS POKÉMON</h4>
+            <p>Não pode ser usado nome ofensivo ou sem sentido ao renomear o Pokémon</p>
+            
+            <h4>XII. ATACAR OUTRO JOGADOR</h4>
+            <p>Como já foi falado, Pokémons são como armas, sendo assim é proibido atacar outros jogadores sem nenhum contexto de RP e de maneira covarde/injusta.</p>
+            
+            <h4>XIII. POKÉMON E REGRAS GERAIS</h4>
+            <p>As regras de Powergaming, Trash RP, RDM, VDM e Amor a vida também se aplicam aos Pokémons, lembrem-se que eles são seres vivos! Além disso, qualquer rp com conotação sexual com pokémons será BANIMENTO PERMANENTE.</p>
+        </section>
+        
+        <!-- REGRAS DE GINÁSIOS -->
+        <section id="ginasios" class="rule-section">
+            <h2>REGRAS BATALHAS E GINÁSIOS</h2>
+            <p><em>Portal criado e desenvolvido por: Harley Foxy | Créditos: King [STAFF responsável ginásios]</em></p>
+            
+            <h3>1. REGRAS DE CONDUTA</h3>
+            <p>A seguir estão as regras que o líder deverá seguir para manter-se como líder. Se um líder infringir as regras gerais ou dos ginásios, estará sujeito a advertências ou substituição do projeto. Isso também vale para comportamento tóxico ou quebra de imersão durante batalhas;</p>
+            
+            <div class="rule-item">
+                O ginásio deverá ser ativo, podendo ficar inativo por um período pequeno, no máximo 2 dias. O líder poderá ter um tempo de inatividade de no máximo 4 dias. Caso necessário de mais tempo, informar com justificativa plausível via ticket ou pro privado para a pessoa responsável;
+            </div>
+            
+            <div class="rule-item">
+                Todas as batalhas devem ser gravadas, pois serão todas analisadas para evitar uso indevido de bug de ambas as partes;
+            </div>
+            
+            <div class="rule-item">
+                Em hipótese alguma deverá ser apenas batalha, deve desenvolver um RP em cima do desafio;
+            </div>
+            
+            <div class="rule-item">
+                Toda recusa de batalha deve ter explicação plausível;
+            </div>
+            
+            <div class="rule-item">
+                O líder deve ter uma identidade coerente com o tema do ginásio (tipo de Pokémon, especialidade). Isso inclui uniforme e estilo de batalhas que combinem com a temática;
+            </div>
+            
+            <div class="rule-item">
+                As batalhas devem ser conduzidas com transparência. Nenhuma vantagem pode ser usada sem estar previamente listada nas regras oficiais do ginásio;
+            </div>
+            
+            <div class="rule-item">
+                O líder é responsável por treinar sua equipe com base nos padrões do ginásio. Isso inclui não apenas os Pokémon, mas também estratégias que representem bem o estilo da sua arena;
+            </div>
+            
+            <div class="rule-item">
+                O líder deve manter respeito e cordialidade com todos os treinadores que desafiarem o ginásio. Regras de conduta como evitar provocações desnecessárias são essenciais;
+            </div>
+            
+            <div class="rule-item">
+                O líder deve proporcionar batalhas equilibradas e interessantes, promovendo a criatividade em estratégias e permitindo que jogadores novatos também tenham chance de competir;
+            </div>
+            
+            <div class="rule-item">
+                A equipe deve manter o diário atualizado com os acontecimentos da semana referente ao seu ginásio.
+            </div>
+            
+            <h3>2. REGRAS DE TERRENO</h3>
+            <p>Deverão ser seguidas algumas regras específicas de acordo com as arenas atuais. Não será permitido o uso de movimentos cujo tipo não corresponda à condição da arena.</p>
+            
+            <h4>2.1 🌊GINÁSIO DE ÁGUA</h4>
+            <p>O uso de golpes elétricos será proibido na arena de água, uma vez que esta arena é um coliseu situado na superfície do mar. A água contém uma alta concentração de íons, especialmente de sódio, tornando-a extremamente condutora de eletricidade. Dessa forma, qualquer golpe elétrico se espalharia pela água, afetando TODOS os presentes na arena.</p>
+            
+            <h4>2.2 🔥GINÁSIO DE FOGO</h4>
+            <p>Por se tratar de uma arena localizada em meio ao deserto, onde até mesmo na arena há focos de fogo, o calor extremo faria com que a água evaporasse rapidamente. Assim, o uso de golpes de água é proibido. A arena está localizada no interior de uma casa, portanto golpes que afetam o terreno, como Earthquake e Magnetute serão proibidos também. Para o desafio, é obrigatório o uso de roupas leves.</p>
+            
+            <h4>2.3⚡️GINÁSIO ELÉTRICO</h4>
+            <p>A arena elétrica é suspensa por vigas de ferro. Portanto, golpes que afetam o terreno, como Earthquake, Magnetude e Surf, são proibidos para garantir a segurança da estrutura e das pessoas presentes.</p>
+            
+            <h4>2.4 🗿GINÁSIO DE PEDRA</h4>
+            <p>A arena de pedra está situada dentro de uma caverna, o que torna proibido o uso de golpes que afetam o terreno, como os mencionados anteriormente. Earthquake e Magnitude são golpes que mexem com o solo e poderiam causar desmoronamentos. Já Surf, sendo uma tsunami, inundaria a caverna.</p>
+            
+            <h4>2.5 GINÁSIO DE GRAMA</h4>
+            <p>Devido ao fato de a arena de Grama funcionar quase como uma estufa de plantas, golpes do tipo Fogo e Gelo serão proibidos para evitar danos ao ambiente. Além disso, por ser um local fechado, o golpe Fly também não poderá ser utilizado.</p>
+            
+            <h4>2.6 ☣️GINÁSIO DE VENENO</h4>
+            <p>Embora ainda não esteja em uso, essa arena será um local com muitos Pokémon venenosos que emitem gases. Por isso, os treinadores deverão usar roupas adequadas, e golpes de fogo serão proibidos devido ao risco de explosão causado pelos gases inflamáveis.</p>
+            
+            <h3>3. REGRAS DE BATALHA</h3>
+            <p>Por se tratar de batalhas oficiais, é fundamental seguir um conjunto de regras específicas para garantir uma competição justa, equilibrada e desafiadora, onde as habilidades dos treinadores e de seus Pokémon sejam testadas ao máximo.</p>
+            
+            <h4>3.1 - REGRA DO SONO</h4>
+            <p>Esta regra impede que o jogador coloque mais de um Pokémon do time adversário para dormir ao mesmo tempo durante a batalha. Isso é feito para evitar estratégias repetitivas e irritantes, onde o jogador coloca todos os Pokémon adversários em sono contínuo, fazendo a batalha durar mais e tornando-a injusta.</p>
+
+            <h4>3.2 - REGRA DE OHKO</h4>
+            <p>"OHKO" significa "One-Hit Knock Out" (Nocaute com um único golpe). Essa regra proíbe o uso de ataques que podem derrotar um Pokémon com apenas um golpe, como o "Fissure" ou "Sheer Cold". Essas técnicas tornam a batalha muito imprevisível e injusta, já que podem derrotar qualquer Pokémon sem chance de defesa.</p>
+            
+            <h4>3.3 - REGRA DE ITENS</h4>
+            <p>Essa cláusula impede que os jogadores usem itens durante a batalha que não sejam permitidos ou que ofereçam uma vantagem desproporcional, como curar Pokémon em excesso ou aumentar a força de ataques de forma exagerada. Isso é feito para manter o foco nas habilidades dos jogadores e seus Pokémon, e não em itens que possam desequilibrar a competição.</p>
+
+            <h4>3.4 - REGRA DE EVASÃO</h4>
+            <p>Golpes que aumentam a evasão do usuário, como Double Team e Minimize, são proibidos. Essa regra garante que a partida não dependa excessivamente da sorte e prioriza estratégias claras.
+                Exemplo prático: Usar Double Team para aumentar a chance de esquivar de golpes do oponente não é permitido.</p>
+            
+            <h4>3.5 - REGRA DE PASSAR O BASTÃO</h4>
+            <p>A Pass Clause é uma regra competitiva que limita o uso do golpe Baton Pass para manter o equilíbrio em batalhas. Essa cláusula permite que apenas um Pokémon por equipe utilize Baton Pass, impedindo que múltiplos membros de um time abusem do movimento para transferir melhorias acumuladas de atributos, como Velocidade e Ataque, entre si. Essa limitação garante que o golpe continue sendo uma ferramenta estratégica, sem comprometer a diversidade e a justiça das partidas.</p>
+
+            <h4>3.6 - REGRA DE ESPÉCIE ÚNICA</h4>
+            <p>Nessa regra, um jogador não pode usar dois Pokémon da mesma espécie no seu time. Por exemplo, não seria permitido usar dois Charizards ou dois Bulbasaurs no mesmo time. Isso é para garantir mais diversidade nas batalhas e evitar que um time seja excessivamente forte com muitos Pokémon iguais.
+                Essa regra pode ser flexibilizada para os líderes de ginásio caso o tipo de Pokémon que eles utilizam não tenha 6 opções distintas viáveis para compor um time competitivo. Nesses casos, o líder poderá repetir Pokémon do mesmo tipo em seu time, desde que isso se justifique pela limitação de opções disponíveis dentro do tipo em questão.</p>
+
+            <h4>4. POKÉMON DISPONÍVEIS</h4>
+            <p>Abaixo, segue uma lista com os Pokémon de cada tipo que podem ser usados, permitindo que o líder monte seu time de acordo com a variedade limitada de Pokémon disponíveis para aquele tipo específico. 
+                As pré-evoluções poderão ser utilizadas, mas serão tratadas como a espécie final. Por exemplo, Charmander e Charmeleon serão considerados como Charizard, o que significa que apenas um deles poderá ser usado.</p>
+            
+            <h3>4.1 PEDRA</h3>
+            <h4>Golem,
+                Onix,
+                Rhydon,
+                Omaster,
+                Kabuto,
+                Aerodactyl.
+            </h4>
+
+            <h3>4.2 ÁGUA</h3>
+            <h4>Blastoise,
+
+                Golduck,
+                
+                Poliwrath,
+                
+                Tentacruel,
+                
+                Slowbro,
+                
+                Dewgong,
+                
+                Cloyster,
+                
+                Kingler,
+                
+                Seadra,
+                
+                Seaking,
+                
+                Starmie,
+                
+                Gyarados,
+                
+                Lapras,
+                
+                Vaporeon,
+                
+                Omastar,
+                
+                Kabutops.</h4>
+
+                <h3>4.3 ELÉTRICO</h3>
+                <h4>Raichu,
+
+                    Magneton,
+                    
+                    Electrode,
+                    
+                    Electabuz,
+                    
+                    Jolteon.</h4>
+
+                <h3>4.4 GRAMA</h3>
+                <h4>Venusaur,
+
+                    Vileplume,
+                    
+                    Parasect,
+                    
+                    Victreebel,
+                    
+                    Exeggutor,
+                    
+                    Tangela.</h4>
+
+                <h3>4.5 VENENO</h3>
+                <h4>Venusaur,
+
+                    Beedrill,
+                    
+                    Arbok,
+                    
+                    Nidoqueen,
+                    
+                    Nidoking,
+                    
+                    Golbat,
+                    
+                    Vileplume,
+                    
+                    Victreebel,
+                    
+                    Tentacruel,
+                    
+                    Muk,
+                    
+                    Gengar,
+                    
+                    Weezing.</h4>
+
+                <h3>4.6 PSÍQUICO</h3>
+                <h4>Alakazam,
+
+                    Slowbro,
+                    
+                    Hypno,
+                    
+                    Exeggutor,
+                    
+                    Starmie,
+                    
+                    Mr. Mime,
+                    
+                    Jynx.</h4>
+
+                <h3>4.7 FOGO</h3>
+                <h4>Charizard,
+
+                    Ninetales,
+                    
+                    Arcanine,
+                    
+                    Rapidash,
+                    
+                    Magmar,
+                    
+                    Flareon.</h4>
+
+                <h3>4.8 TERRA</h3>
+                <h4>Sandslash,
+
+                    Nidoqueen,
+                    
+                    Nidoking,
+                    
+                    Dugtrio,
+                    
+                    Golem,
+                    
+                    Onix,
+                    
+                    Marowak,
+                    
+                    Rhydon.</h4>
